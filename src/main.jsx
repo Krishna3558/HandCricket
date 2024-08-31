@@ -1,9 +1,12 @@
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {
   BrowserRouter,
   createBrowserRouter,
+  Route,
   RouterProvider,
+  Routes,
 } from "react-router-dom";
 import App from './App.jsx'
 import './index.css'
@@ -47,6 +50,16 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+    <BrowserRouter basename='/HandCricket'>
+    <Routes>
+      <Route path='/' element = {<App/>} />
+      <Route path= "/help" element= {<Help/>}/>
+      <Route path= "/chasetarget" element= {<Chase/>}/>
+      <Route path= "/defendtarget" element= {<Defend/>}/>
+      <Route path= "/playfullgame" element= {<Playing/>}/>
+      <Route path= "/playtoss" element= {<Fullgame/>}/>
+      <Route path= "/contact" element= {<Contact/>}/>
+    </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
 )

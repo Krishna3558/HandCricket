@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 function Contact() {
   return (
     <div >
-    <Navbar/>
+      <Navbar/>
     <h1 className=' text-center font-extrabold text-2xl py-10'>Contact Us</h1>
     <p className=' text-center'>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic dolore fugit nesciunt corrupti, asperiores, facilis ipsa, laborum quasi perferendis doloremque necessitatibus molestias velit mollitia eos at voluptate quisquam! Sed, reprehenderit?
