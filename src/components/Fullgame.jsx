@@ -112,11 +112,11 @@ function Fullgame() {
     </nav>
     <div className=' flex justify-center space-x-32 max-lg:space-x-10 pt-10 max-sm:space-x-5 '>
             <div className=' flex flex-col space-y-8'>
-                <h1 className=' text-center font-bold text-lg max-sm:text-base max-[450px]:text-sm max-[388px]:text-xs'>Comp Choice</h1>
+                <h1 className=' text-center font-bold text-lg max-sm:text-base max-[450px]:text-sm max-[388px]:text-[10px]'>Comp Choice</h1>
                 <button className=' border-2 border-black rounded-full h-28 w-28 bg-blue-400 text-white max-lg:h-20 max-lg:w-20 max-md:h-16 max-md:w-16 max-sm:h-12 max-sm:w-12 max-[450px]:h-[40px] max-[450px]:w-[40px] max-[450px]:text-xs '>{random}</button>
             </div>
             <div className=' flex flex-col space-y-8'>
-                <h1 className=' text-center font-bold text-lg max-sm:text-base max-[450px]:text-sm max-[388px]:text-xs'>Your Choice</h1>
+                <h1 className=' text-center font-bold text-lg max-sm:text-base max-[450px]:text-sm max-[388px]:text-[10px]'>Your Choice</h1>
                 <div className=' flex space-x-6 max-lg:space-x-3 max-sm:space-x-2'>
                 <button onClick={() => {updateScore(1)}} disabled={tossDone} className=' border-2 border-black rounded-full  h-28 w-28 bg-blue-400 text-white hover:bg-blue-500 active:bg-blue-600 max-lg:h-20 max-lg:w-20 max-md:h-16 max-md:w-16 max-sm:h-12 max-sm:w-12 max-[450px]:h-[40px] max-[450px]:w-[40px] max-[450px]:text-xs'>1</button>
                 <button onClick={() => {updateScore(2)}} disabled={tossDone} className=' border-2 border-black rounded-full  h-28 w-28 bg-blue-400 text-white hover:bg-blue-500 active:bg-blue-600 max-lg:h-20 max-lg:w-20 max-md:h-16 max-md:w-16 max-sm:h-12 max-sm:w-12 max-[450px]:h-[40px] max-[450px]:w-[40px] max-[450px]:text-xs'>2</button>

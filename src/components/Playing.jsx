@@ -316,23 +316,23 @@ function Playing() {
             <p className=' text-center text-lg font-bold'>{roboTeam}</p>
           </div>
         </div>
-        <h1 className=' flex justify-center py-10 space-x-4'>
-            <p className=' font-bold text-lg max-sm:text-sm'>Toss Update: </p>
-            <p className=' font-semibold text-lg max-sm:text-sm'>{ (tossWinner == "You") ? `${userTeam} won the toss and decided to ${winnerChoice} first` : `${roboTeam} won the toss and decided to ${winnerChoice} first` }</p>
+        <h1 className=' flex justify-center py-10 space-x-2'>
+            <p className=' font-bold text-lg max-sm:text-sm max-[396px]:text-[12px]'>Toss Update: </p>
+            <p className=' font-semibold text-lg max-sm:text-sm max-[396px]:text-[12px]'>{ (tossWinner == "You") ? `${userTeam} won the toss and decided to ${winnerChoice} first` : `${roboTeam} won the toss and decided to ${winnerChoice} first` }</p>
         </h1>
         <nav className=' list-none bg-blue-900 flex justify-center space-x-40 max-lg:space-x-20 max-md:space-x-10  max-sm:space-x-6 max-sm:h-12 max-[356px]:space-x-2 font-extrabold text-lg text-white uppercase'>
-          <li><div style={{backgroundImage: `url(${userPhoto})`}} className=' bg-cover w-24 max-sm:w-16 h-full'></div></li>
-          <li className='py-4 max-sm:text-xs'>{(scoreName == "You") ? `${userTeam} Score: ${currScore}` : `${roboTeam} Score: ${currScore}`}</li>
+          <li><div style={{backgroundImage: `url(${scoreName == "You" ? userPhoto : roboPhoto})`}} className=' bg-cover w-24 max-sm:w-16 h-full'></div></li>
+          <li className='py-4 max-sm:text-xs'>{(scoreName == "You") ? `${userTeam}: ${currScore}` : `${roboTeam}: ${currScore}`}</li>
           <li className='py-4 max-sm:text-xs'>Target: {target}</li>
-          <li><div style={{backgroundImage: `url(${roboPhoto})`}} className=' bg-cover w-24 max-sm:w-16 h-full'></div></li>
+          <li><div style={{backgroundImage: `url(${scoreName == "You" ? roboPhoto : userPhoto})`}} className=' bg-cover w-24 max-sm:w-16 h-full'></div></li>
         </nav>
         <div className=' flex justify-center space-x-32 max-lg:space-x-10 pt-10 max-sm:space-x-5 '>
             <div className=' flex flex-col space-y-8'>
-                <h1 className=' text-center font-bold text-lg max-sm:text-base max-[450px]:text-sm max-[388px]:text-xs'>Comp Choice</h1>
+                <h1 className=' text-center font-bold text-lg max-sm:text-base max-[450px]:text-sm max-[388px]:text-[10px]'>Comp Choice</h1>
                 <button className=' border-2 border-black rounded-full h-28 w-28 bg-blue-400 text-white max-lg:h-20 max-lg:w-20 max-md:h-16 max-md:w-16 max-sm:h-12 max-sm:w-12 max-[450px]:h-[40px] max-[450px]:w-[40px] max-[450px]:text-xs '>{random}</button>
             </div>
             <div className=' flex flex-col space-y-8'>
-                <h1 className=' text-center font-bold text-lg max-sm:text-base max-[450px]:text-sm max-[388px]:text-xs'>Your Choice</h1>
+                <h1 className=' text-center font-bold text-lg max-sm:text-base max-[450px]:text-sm max-[388px]:text-[10px]'>Your Choice</h1>
                 <div className=' flex space-x-6 max-lg:space-x-3 max-sm:space-x-2'>
                 <button onClick={() => {updateScore(1)}} disabled = {battingOut} className=' border-2 border-black rounded-full  h-28 w-28 bg-blue-400 text-white hover:bg-blue-500 active:bg-blue-600 max-lg:h-20 max-lg:w-20 max-md:h-16 max-md:w-16 max-sm:h-12 max-sm:w-12 max-[450px]:h-[40px] max-[450px]:w-[40px] max-[450px]:text-xs'>1</button>
                 <button onClick={() => {updateScore(2)}} disabled = {battingOut} className=' border-2 border-black rounded-full  h-28 w-28 bg-blue-400 text-white hover:bg-blue-500 active:bg-blue-600 max-lg:h-20 max-lg:w-20 max-md:h-16 max-md:w-16 max-sm:h-12 max-sm:w-12 max-[450px]:h-[40px] max-[450px]:w-[40px] max-[450px]:text-xs'>2</button>
